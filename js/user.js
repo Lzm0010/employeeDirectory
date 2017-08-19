@@ -186,6 +186,7 @@ $(document).ready(function(){
   //adds listener to modal that moves to previous user
   //include edge case
   function prevUser(users, userId){
+    userId = parseInt(userId);
     if(userId === 0){
       displayUserModal(users, users[users.length - 1], users.length - 1);
     } else {
