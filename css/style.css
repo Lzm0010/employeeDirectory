@@ -121,27 +121,11 @@ label {
   cursor: pointer;
 }
 
-
-/***************
- SEARCH SECTION
-***************/
-
-#searchMe{
-  margin-right: 6%;
-  margin-top: 2.8%;
-  float: right;
-  width: 300px;
-  height: 37px;
-}
-
-
 /***************
  USERS SECTION
 ***************/
 
 #users ul {
-  display:grid;
-  grid-template-columns: 5% 30% 30% 30% 5%;
   list-style: none;
   padding-left: 0;
 }
@@ -160,12 +144,77 @@ label {
   cursor: pointer;
 }
 
-#users ul li:nth-child(3n+1){
-  grid-column: 2/3;
+
+/***************
+ MEDIA QUERIES
+***************/
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+
+
+  /***************
+   SEARCH SECTION
+  ***************/
+
+  #searchMe{
+    margin-right: 6%;
+    margin-top: 2.8%;
+    float: right;
+    width: 300px;
+    height: 37px;
+  }
+
+
+  /***************
+   USERS SECTION
+  ***************/
+
+  #users ul {
+    display:grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+  }
+
+  #users ul li:nth-child(3n+1){
+    grid-column: 2/3;
+  }
+
+  #users ul li:nth-child(3n+2){
+    grid-column: 3/4;
+  }
+
+  #users ul li:nth-child(3n+3){
+    grid-column: 4/5;
+  }
 }
-#users ul li:nth-child(3n+2){
-  grid-column: 3/4;
-}
-#users ul li:nth-child(3n+3){
-  grid-column: 4/5;
+
+@media only screen and (max-width: 767px) {
+
+
+  /***************
+   SEARCH SECTION
+  ***************/
+
+  #searchMe{
+    margin-right: 20%;
+    margin-top: 2%;
+    float: right;
+    width: 300px;
+    height: 37px;
+  }
+
+
+  /***************
+   USERS SECTION
+  ***************/
+
+  #users ul {
+    clear:both;
+    display:grid;
+    grid-template-columns: 5% 90% 5%;
+
+  }
+
+  #users ul li{
+    grid-column: 2/3;
+  }
 }
